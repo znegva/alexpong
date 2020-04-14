@@ -1,7 +1,5 @@
 #spielfeld{
     position: relative;
-    width: 600px;
-    height: 400px;
 
     margin: auto;
     margin-top: 10%;
@@ -12,16 +10,10 @@
 #paddelLinks,
 #paddelRechts{
     position: absolute;
-    height: 30px;
-    width: 7px;
-
     background-color: black;
 }
 
 #ball{
     position: absolute;
-    width: 10px;
-    height: 10px;
-
     background-color: gold;
 }
