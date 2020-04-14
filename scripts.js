@@ -12,7 +12,6 @@ function lassDenBallRollen(){
         
     setInterval(function(){
         var richtung = zufallszahlZwischen(0,4);
-        console.log(richtung);
         var entfernung = ganzzahlZufallszahlZwischen(10,20);
         
         if(richtung<1){
