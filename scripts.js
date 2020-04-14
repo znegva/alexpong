@@ -11,17 +11,20 @@ function lassDenBallRollen(){
     var ball = document.getElementById("ball");
         
     setInterval(function(){
-        bewegeNachUnten(ball, 8);
-    }, 2222);
-    setInterval(function(){
-        bewegeNachRechts(ball, 4);
-    }, 800);
-    setInterval(function(){
-        bewegeNachOben(ball, 7);
-    }, 3500);
-    setInterval(function(){
-        bewegeNachLinks(ball, 6);
-    }, 3000);
+        var richtung = zufallszahlZwischen(0,4);
+        console.log(richtung);
+        var entfernung = ganzzahlZufallszahlZwischen(10,20);
+        
+        if(richtung<1){
+            bewegeNachUnten(ball, entfernung);
+        }else if(richtung <2){
+            bewegeNachOben(ball, entfernung);
+        }else if(richtung <3){
+            bewegeNachLinks(ball, entfernung);
+        }else{
+            bewegeNachRechts(ball, entfernung);
+        }
+    }, 1000);
 }
 
 /**
@@ -70,4 +73,15 @@ function bewegeNachOben(element, wert){
 }
 function bewegeNachUnten(element, wert){
     element.style.top = (parseInt(element.style.top) + wert) + "px";
+}
+
+/**
+ * ein paar mathematische Funktionen die wir evtl. öfter mal brauchen
+ */
+function zufallszahlZwischen(start, ende) {
+    return start + Math.random() * (ende - start);
+}
+
+function ganzzahlZufallszahlZwischen(start, ende){
+    return Math.round(zufallszahlZwischen(start,ende));
 }
