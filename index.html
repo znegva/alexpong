@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <img src="black.png" id="mySquare" style="margin-left: 10px;margin-top:10px;">
+    </body>
+    <script>
+        var mySquare = document.getElementById("mySquare");
+        
+        setInterval(function(){
+            moveDown(mySquare);
+        }, 2222);
+        setInterval(function(){
+            moveRight(mySquare, 30);
+        }, 800);
+        setInterval(function(){
+            moveTop(mySquare);
+        }, 3500);
+        setInterval(function(){
+            moveLeft(mySquare);
+        }, 3000);
+
+
+        //TODO: Funktionen abhängig von der gedrückten Taste aufrufen
+
+
+
+        function moveRight(element, value){
+            element.style.marginLeft = (parseInt(element.style.marginLeft) + value) + "px";
+        }
+        function moveLeft(element){
+            element.style.marginLeft = (parseInt(element.style.marginLeft) - 10) + "px";
+        }
+        function moveTop(element){
+            element.style.marginTop = (parseInt(element.style.marginTop) - 10) + "px";
+        }
+        function moveDown(element){
+            element.style.marginTop = (parseInt(element.style.marginTop) + 10) + "px";
+        }
+    </script>
+</html>
