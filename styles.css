@@ -16,15 +16,6 @@
     width: 7px;
 
     background-color: black;
-
-    top: calc((400px - 30px)/2);
-}
-
-#paddelLinks{
-    left: 3px;
-}
-#paddelRechts{
-    right: 3px;
 }
 
 #ball{
@@ -33,7 +24,4 @@
     height: 10px;
 
     background-color: gold;
-
-    top: calc((400px - 10px)/2);
-    left: calc((600px - 10px)/2);
 }
