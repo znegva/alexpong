@@ -1,0 +1,39 @@
+#spielfeld{
+    position: relative;
+    width: 600px;
+    height: 400px;
+
+    margin: auto;
+    margin-top: 10%;
+
+    background-color: deeppink;
+}
+
+#paddelLinks,
+#paddelRechts{
+    position: absolute;
+    height: 30px;
+    width: 7px;
+
+    background-color: black;
+
+    top: calc((400px - 30px)/2);
+}
+
+#paddelLinks{
+    left: 3px;
+}
+#paddelRechts{
+    right: 3px;
+}
+
+#ball{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+
+    background-color: gold;
+
+    top: calc((400px - 10px)/2);
+    left: calc((600px - 10px)/2);
+}
